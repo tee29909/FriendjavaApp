@@ -2,7 +2,7 @@
 public class friend {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		dataFriend dataFriend = new dataFriend("admin","admin","mail","admin0","admin0");
 
 	}
 
