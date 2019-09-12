@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Manu {
-	Scanner kb = new Scanner(System.in);
+	
 	public void selectManu() {
 		System.out.println("---Manu---");
 		Manu();
@@ -27,6 +27,7 @@ public class Manu {
 	}
 	public void selectInput() {
 		System.out.print("Select manu :");
+		Scanner kb = new Scanner(System.in);
 		try {
 			int manu = kb.nextInt();
 			switch (manu) {
