@@ -7,9 +7,10 @@ public class friend {
 		dataFriend dataFriend;
 		ArrayList<dataFriend> friends = new ArrayList<dataFriend>();
 		friends.add(new dataFriend("admin","admin","admin","admin","admin"));
-		System.out.println(friends.size());
-		System.out.println(friends.get(0).getname());
 		login login = new login();
+		if(login.login(friends)) { 
+			System.out.println("yes");
+		}
 
 	}
 

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class login {
@@ -17,20 +18,27 @@ public class login {
 		System.out.println();
 		return password;
 	}
-	public boolean Check(String Username,String Password) {
+	public boolean Check(String Username,String Password,ArrayList<dataFriend> friends) {
+		int userSize = friends.size();
+		for(int i=0;i<userSize;i++) {
+			if(Username.equals(friends.get(i).getusername())&&Password.equals(friends.get(i).getpassword())) {
+				return true;
+			}
+		}
+		return false;
 		
-		return true;
+		
 	}
-	public boolean login() {
+	public boolean login(ArrayList<dataFriend> friends) {
 		messageStart();
 		String Username = Username();
 		String Password = Password();
-		if(Check(Username,Password)) {
+		if(Check(Username,Password,friends)) {
 			return true;
 		}
 		System.out.println("User or Password incorrect.");
 		System.out.println("Please fill in the correct information.");
-		return login();	
+		return login(friends);	
 	}
 
 }
