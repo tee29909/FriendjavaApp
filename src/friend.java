@@ -9,10 +9,14 @@ public class Friend {
 		friends.add(new DataFriend("admin","admin","admin","admin","admin"));
 		Login login = new Login();
 		if(login.login(friends)) { 
-			System.out.println("yes");
 			System.out.println("Hello "+friends.get(0).getName());
+			Manu();
 		}
 
 	}
 
+	private static void Manu() {
+		Manu manu = new Manu();
+		manu.selectManu();
+	}
 }
