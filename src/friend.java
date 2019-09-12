@@ -1,15 +1,16 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class friend {
+public class Friend {
 
 	public static void main(String[] args) {
-		dataFriend dataFriend;
-		ArrayList<dataFriend> friends = new ArrayList<dataFriend>();
-		friends.add(new dataFriend("admin","admin","admin","admin","admin"));
-		login login = new login();
+		DataFriend dataFriend;
+		ArrayList<DataFriend> friends = new ArrayList<DataFriend>();
+		friends.add(new DataFriend("admin","admin","admin","admin","admin"));
+		Login login = new Login();
 		if(login.login(friends)) { 
 			System.out.println("yes");
+			System.out.println("Hello "+friends.get(0).getName());
 		}
 
 	}

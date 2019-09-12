@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class login {
+public class Login {
 	Scanner kb = new Scanner(System.in);
 	public void messageStart() {
 		System.out.println("FriendApp");
@@ -18,10 +18,10 @@ public class login {
 		System.out.println();
 		return password;
 	}
-	public boolean Check(String Username,String Password,ArrayList<dataFriend> friends) {
+	public boolean Check(String Username,String Password,ArrayList<DataFriend> friends) {
 		int userSize = friends.size();
 		for(int i=0;i<userSize;i++) {
-			if(Username.equals(friends.get(i).getusername())&&Password.equals(friends.get(i).getpassword())) {
+			if(Username.equals(friends.get(i).getUsername())&&Password.equals(friends.get(i).getPassword())) {
 				return true;
 			}
 		}
@@ -29,7 +29,7 @@ public class login {
 		
 		
 	}
-	public boolean login(ArrayList<dataFriend> friends) {
+	public boolean login(ArrayList<DataFriend> friends) {
 		messageStart();
 		String Username = Username();
 		String Password = Password();
