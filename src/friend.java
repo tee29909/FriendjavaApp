@@ -8,15 +8,18 @@ public class Friend {
 		ArrayList<DataFriend> friends = new ArrayList<DataFriend>();
 		friends.add(new DataFriend("admin","admin","admin","admin","admin"));
 		Login login = new Login();
-		if(login.login(friends)) { 
+		Scanner kb = new Scanner(System.in);
+		String user = login.login(friends);
+		
+		if(!user.equals("")) { 
 			System.out.println("Hello "+friends.get(0).getName());
-			Manu();
+			Manu(friends,user);
 		}
 
 	}
 
-	private static void Manu() {
+	private static void Manu(ArrayList<DataFriend> friends,String user) {
 		Manu manu = new Manu();
-		manu.selectManu();
+		manu.selectManu(friends,user);
 	}
 }

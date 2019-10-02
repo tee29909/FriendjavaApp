@@ -29,12 +29,12 @@ public class Login {
 		
 		
 	}
-	public boolean login(ArrayList<DataFriend> friends) {
+	public String login(ArrayList<DataFriend> friends) {
 		messageStart();
 		String Username = Username();
 		String Password = Password();
 		if(Check(Username,Password,friends)) {
-			return true;
+			return Username;
 		}
 		System.out.println("User or Password incorrect.");
 		System.out.println("Please fill in the correct information.");
